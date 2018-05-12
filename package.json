@@ -1,0 +1,24 @@
+{
+  "name": "regexp-stack",
+  "version": "1.0.0",
+  "description": "This library allows to run regular expressions.",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/run-all.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/ezaca/regexp-stack"
+  },
+  "keywords": [
+    "RegExp",
+    "regular-expression",
+    "stack"
+  ],
+  "author": "Eliakim Zacarias",
+  "license": "MIT"
+}
