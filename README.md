@@ -141,28 +141,35 @@ Like before, we used the `/g` flag to ignore characters between the numbers. The
 
 # Reference
 
-`new RegExpStack ()`
+#### `new RegExpStack ()`
+
 Instantiates the object. Does not accept any argument.
 
-`stack.globalLastIndex`
+#### `stack.globalLastIndex`
+
 Returns the lastIndex position shared among expressions.
 
-`stack.add (name, expression, groups);
+#### `stack.add (name, expression, groups)`
+
 Add an expression to the stack, where *name* is the name of the expression (to call it), *expression* is an instance of RegExp, including a literal regular expression, and *groups* is an array or string with the names of the fields in the result corresponding to capturing groups.
 
-`stack.match (name, text)` or `stack.$name (text)`
+#### `stack.match (name, text)` or `stack.$name (text)`
+
 Matches the *text* using the expression referenced by *name*. Similar to the "exec" method on common regular expressions.
 The capture starts from the last global index, and updates the index to the new position after the capture, if return something, or let it untouched if not.
 
-`stack.all (name, text)` or `stack.all$name (text)`
+#### `stack.all (name, text)` or `stack.all$name (text)`
+
 Matches *text* using the expression reference by *name* while the last match returns something. When nothing more is captured, it returns an array with the obtained results.
 The capture starts from the last global index and resets the index after it ran.
 
-`stack.each (name, text)` or `stack.each$name (text)`
+#### `stack.each (name, text)` or `stack.each$name (text)`
+
 Intended to use in a for..of loop, this function returns a Generator that yields results while there is something to match. The loop will stop when nothing more is matched.
 The capture starts from the last global index and resets the index after it ran.
 
-`stack.reset ()`
+#### `stack.reset ()`
+
 Set the "globalLastIndex" to zero, what causes the next capture to start from the begin of the string. It is useful when used in combination with `match`.
 
 -------
