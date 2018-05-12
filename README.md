@@ -2,8 +2,6 @@
 
 This library contains a class which allows creating a stack of multiple regular expressions and executes against one or more texts, capturing and working with results in many ways.
 
-[TOC]
-
 ## Usage
 
 Require the class:
